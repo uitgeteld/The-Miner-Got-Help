@@ -13,7 +13,7 @@ function createWindow() {
     });
     Menu.setApplicationMenu(null);
 
-    win.loadFile('index.html');
+    win.loadFile('dist/renderer/index.html');
 }
 
 const { ipcMain } = require('electron');
