@@ -1,0 +1,24 @@
+{
+  "name": "the-miner-got-help",
+  "version": "1.0.0",
+  "description": "The Miner Got Help, Mine away in your cave.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uitgeteld/The-Miner-Got-Help.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uitgeteld/The-Miner-Got-Help/issues"
+  },
+  "homepage": "https://github.com/uitgeteld/The-Miner-Got-Help#readme",
+  "devDependencies": {
+    "electron": "^39.0.0"
+  }
+}
