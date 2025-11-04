@@ -4,8 +4,39 @@
   "description": "The Miner Got Help, Mine away in your cave.",
   "main": "main.js",
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
     "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dist": "npm run build && electron-builder",
+    "dist:win": "npm run build && electron-builder --win",
+    "dist:mac": "npm run build && electron-builder --mac",
+    "dist:linux": "npm run build && electron-builder --linux"
+  },
+  "build": {
+    "appId": "com.tmgh.app",
+    "productName": "The Miner Got Help",
+    "directories": {
+      "output": "dist",
+      "buildResources": "assets"
+    },
+    "files": [
+      "!assets/generated"
+    ],
+    "win": {
+      "icon": "assets/icons/tmgh.ico",
+      "target": [
+        "nsis"
+      ]
+    },
+    "mac": {
+      "icon": "assets/icons/tmgh.icns"
+    },
+    "linux": {
+      "icon": "assets/icons/tmgh.png",
+      "target": [
+        "AppImage"
+      ]
+    }
   },
   "repository": {
     "type": "git",
@@ -19,6 +50,12 @@
   },
   "homepage": "https://github.com/uitgeteld/The-Miner-Got-Help#readme",
   "devDependencies": {
-    "electron": "^39.0.0"
+    "@sveltejs/vite-plugin-svelte": "^6.2.1",
+    "electron": "^39.0.0",
+    "electron-builder": "^26.0.12",
+    "sass": "^1.93.3",
+    "svelte": "^5.43.3",
+    "svelte-preprocess": "^6.0.3",
+    "vite": "^7.1.12"
   }
 }
